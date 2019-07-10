@@ -4,8 +4,8 @@ exports.createUserValidator = (req, res, next) => {
     max: 32
   });
   req.check("email", "Email is required").notEmpty();
-  req.check("email", "Email must be between 3 to 32 characters")
-    .matches(/.+\@+\..+/)
+  req.check("email", "Email must be between 4 to 32 characters")
+    .matches(/.+\@.+\..+/)
     .withMessage("Email must contain @")
     .isLength({
       min: 4, max: 32
