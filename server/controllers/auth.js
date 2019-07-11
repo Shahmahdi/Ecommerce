@@ -41,7 +41,22 @@ exports.signout = (req, res) => {
   res.json({ message: 'Signout successful.' });
 };
 
-exports.requireSigin = expressJwt({
+exports.requireSignin = expressJwt({
   secret: process.env.JWT_SECRET,
   userProperty: 'auth'
 });
+
+exports.isAuth = (req, res, next) => {
+  const user = req.profile && req.auth && req.profile._id == req.auth._id;
+  if (!user) {
+    res.status(403).json({ error: 'Access denied..' });
+  }
+  next();
+};
+
+exports.isAdmin = (req, res, next) => {
+  if (req.profile.role === 0) {
+    res.status(403).json({ error: 'Admin resource. Access denied..'});
+  }
+  next();
+}
