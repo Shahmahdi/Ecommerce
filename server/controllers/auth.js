@@ -28,7 +28,7 @@ exports.signin = (req, res) => {
     }
 
     // generate the signed token using user id and secret
-    const token = jwt.sign({ _id: user._id },  process.env.JWT_SECRET);
+    const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET);
     res.cookie('t', token, { expire: new Date() + 9999 });
     const { _id, name, email, role } = user;
     res.json({ token, user: { _id, name, email, role } });
@@ -56,7 +56,7 @@ exports.isAuth = (req, res, next) => {
 
 exports.isAdmin = (req, res, next) => {
   if (req.profile.role === 0) {
-    res.status(403).json({ error: 'Admin resource. Access denied..'});
+    res.status(403).json({ error: 'Admin resource. Access denied..' });
   }
   next();
 }
