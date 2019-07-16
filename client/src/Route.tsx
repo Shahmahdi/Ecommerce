@@ -2,7 +2,7 @@ import * as React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Landing } from './pages/Landing';
 import { Signin } from './pages/user/Signin';
-import { Signup } from './pages/user/Signup';
+import { Signup } from './pages/user/SignupPage';
 
 export const Routes = () => (
   <BrowserRouter>
