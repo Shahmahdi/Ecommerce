@@ -22,6 +22,17 @@ const Menu = (props: RouteComponentProps) => (
           Home
         </Link>
       </li>
+
+      <li className="nav-item">
+        <Link
+          className="nav-link"
+          style={isActive(props.history.location.pathname, '/dashboard')}
+          to="/dashboard"
+        >
+          Dashboard
+        </Link>
+      </li>
+
       {!isAuthenticate() && (
         <>
           <li>
