@@ -31,3 +31,28 @@ export const setUserDataIntoLocalStorage = (data: object, next: Function) => {
   }
   next();
 };
+
+export const signout = (next: Function) => {
+  if (typeof window !== undefined) {
+    localStorage.removeItem('jwt');
+  }
+  next();
+  axios.get(`${API}/signout`)
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    })
+}
+
+export const isAuthenticate = () => {
+  if (typeof window == undefined) {
+    return false;
+  }
+  if (localStorage.getItem('jwt')) {
+    return JSON.parse(localStorage.getItem('jwt')!);
+  } else {
+    return false;
+  }
+}
