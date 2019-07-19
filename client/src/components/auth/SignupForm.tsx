@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { useState } from 'react';
-import { ShowError } from '../Error';
-import { ShowSuccess } from '../Success';
-import { signupFormSubmit } from '../../APIs/auth';
+import { ShowError } from '../common/Error';
+import { ShowSuccess } from '../common/Success';
+import { signupFormSubmit } from '../../APIs/authAPIs';
 
 export const SignupForm = () => {
 

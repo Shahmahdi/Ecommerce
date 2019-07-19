@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { Landing } from './pages/LandingPage';
-import { Signin } from './pages/user/SigninPage';
-import { Signup } from './pages/user/SignupPage';
-import { isAuthenticate } from './APIs/auth';
+import { Signin } from './pages/SigninPage';
+import { Signup } from './pages/SignupPage';
+import { isAuthenticate } from './APIs/authAPIs';
 import { UserDashboard } from './pages/UserDashboardPage';
 import { AdminDashboard } from './pages/AdminDashboardPage';
 

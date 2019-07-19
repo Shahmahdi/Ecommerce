@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Layout } from '../../components/Layout';
-import { SigninForm } from '../../components/user/SigninForm';
+import { Layout } from '../components/common/Layout';
+import { SigninForm } from '../components/auth/SigninForm';
 
 export const Signin = () => (
   <Layout

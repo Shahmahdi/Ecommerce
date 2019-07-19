@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Layout } from '../components/Layout';
-import { isAuthenticate } from '../APIs/auth';
+import { Layout } from '../components/common/Layout';
+import { isAuthenticate } from '../APIs/authAPIs';
 import { Link } from 'react-router-dom';
 
 export const UserDashboard = () => {

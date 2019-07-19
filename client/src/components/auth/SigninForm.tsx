@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { useState } from 'react';
-import { ShowError } from '../Error';
-import { signinFormSubmit, setUserDataIntoLocalStorage, isAuthenticate } from '../../APIs/auth';
-import { Loading } from '../Loading';
+import { ShowError } from '../common/Error';
+import { signinFormSubmit, setUserDataIntoLocalStorage, isAuthenticate } from '../../APIs/authAPIs';
+import { Loading } from '../common/Loading';
 import { Redirect } from 'react-router';
 
 export const SigninForm = () => {

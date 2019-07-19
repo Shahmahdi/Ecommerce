@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Menu from './Menu';
+import Navbar from '../Navbar';
 
 export const Layout = (props: {
   title: string;
@@ -8,7 +8,7 @@ export const Layout = (props: {
   children?: JSX.Element;
 }) => (
   <div>
-    <Menu />
+    <Navbar />
     <div className="jumbotron">
       <h2>{props.title}</h2>
       <p className="lead">{props.description}</p>

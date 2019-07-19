@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Link, withRouter, RouteComponentProps } from 'react-router-dom';
-import { signout, isAuthenticate } from '../APIs/auth';
+import { signout, isAuthenticate } from '../APIs/authAPIs';
 
 const isActive = (locationPath: string, path: string) => {
   if (locationPath === path) {
@@ -10,7 +10,7 @@ const isActive = (locationPath: string, path: string) => {
   }
 };
 
-const Menu = (props: RouteComponentProps) => (
+const Navbar = (props: RouteComponentProps) => (
   <div>
     <ul className="nav nav-tabs bg-primary">
       <li className="nav-item">
@@ -88,4 +88,4 @@ const Menu = (props: RouteComponentProps) => (
   </div>
 );
 
-export default withRouter(Menu);
+export default withRouter(Navbar);

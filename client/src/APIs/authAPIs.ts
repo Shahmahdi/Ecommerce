@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { API } from '../../config';
+import { API } from '../config';
 
 export const signupFormSubmit = (user: object) => (
   axios.post(`${API}/signup`, user)
