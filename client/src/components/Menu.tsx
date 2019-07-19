@@ -23,15 +23,27 @@ const Menu = (props: RouteComponentProps) => (
         </Link>
       </li>
 
-      <li className="nav-item">
-        <Link
-          className="nav-link"
-          style={isActive(props.history.location.pathname, '/dashboard')}
-          to="/dashboard"
-        >
-          Dashboard
-        </Link>
-      </li>
+      {isAuthenticate() && isAuthenticate().user.role === 0 &&
+        <li className="nav-item">
+          <Link
+            className="nav-link"
+            style={isActive(props.history.location.pathname, '/user/dashboard')}
+            to="/user/dashboard"
+          >
+            Dashboard
+          </Link>
+        </li>}
+
+      {isAuthenticate() && isAuthenticate().user.role === 1 &&
+        <li className="nav-item">
+          <Link
+            className="nav-link"
+            style={isActive(props.history.location.pathname, '/admin/dashboard')}
+            to="/admin/dashboard"
+          >
+            Dashboard
+          </Link>
+        </li>}
 
       {!isAuthenticate() && (
         <>
@@ -42,7 +54,7 @@ const Menu = (props: RouteComponentProps) => (
               to="/signup"
             >
               Sign up
-        </Link>
+            </Link>
           </li>
           <li>
             <Link
@@ -51,7 +63,7 @@ const Menu = (props: RouteComponentProps) => (
               to="/signin"
             >
               Sign in
-        </Link>
+            </Link>
           </li>
         </>
       )}

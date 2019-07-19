@@ -1,13 +1,9 @@
 import * as React from 'react';
 import { useState } from 'react';
 import { ShowError } from '../Error';
-import { signinFormSubmit, setUserDataIntoLocalStorage } from '../../APIs/auth';
+import { signinFormSubmit, setUserDataIntoLocalStorage, isAuthenticate } from '../../APIs/auth';
 import { Loading } from '../Loading';
 import { Redirect } from 'react-router';
-
-const RedirectUser = () => (
-  <Redirect to="/" />
-);
 
 export const SigninForm = () => {
 
@@ -18,6 +14,8 @@ export const SigninForm = () => {
     loading: false,
     redirectToReferrer: false
   });
+
+  const { user } = isAuthenticate();
 
   const handleChange = (name: string) => (event: any) => {
     setValues({ ...values, error: '', [name]: event.target.value });
@@ -71,7 +69,11 @@ export const SigninForm = () => {
         >Submit
         </button>
       </form>
-      {values.redirectToReferrer ? <RedirectUser /> : undefined}
+      {values.redirectToReferrer ? 
+        user && user.role === 1  ? <Redirect to="/admin/dashboard" /> : <Redirect to="/user/dashboard" /> 
+        : undefined}
+
+      {isAuthenticate() ? <Redirect to="/" /> : undefined}
     </>
   );
 };
