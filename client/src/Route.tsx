@@ -6,6 +6,7 @@ import { Signup } from './pages/SignupPage';
 import { isAuthenticate } from './APIs/authAPIs';
 import { UserDashboard } from './pages/UserDashboardPage';
 import { AdminDashboard } from './pages/AdminDashboardPage';
+import { Category } from './pages/CategoryPage';
 
 const PrivateRoute = (props: {
   component: any;
@@ -49,6 +50,7 @@ export const Routes = () => (
       <Route path='/signup' exact={true} component={Signup} />
       <PrivateRoute path='/user/dashboard' exact={true} component={UserDashboard} />
       <AdminRoute path='/admin/dashboard' exact={true} component={AdminDashboard} />
+      <AdminRoute path='/create/category' exact={true} component={Category} />
     </Switch>
   </BrowserRouter>
 );

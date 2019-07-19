@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Layout } from '../components/common/Layout';
-import { API } from '../config';
 import { SignupForm } from '../components/auth/SignupForm';
 
 export const Signup = () => (
