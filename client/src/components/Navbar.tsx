@@ -23,6 +23,16 @@ const Navbar = (props: RouteComponentProps) => (
         </Link>
       </li>
 
+      <li className="nav-item">
+        <Link
+          className="nav-link"
+          style={isActive(props.history.location.pathname, '/shop')}
+          to="/shop"
+        >
+          Shop
+        </Link>
+      </li>
+
       {isAuthenticate() && isAuthenticate().user.role === 0 &&
         <li className="nav-item">
           <Link

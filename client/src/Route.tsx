@@ -8,6 +8,7 @@ import { UserDashboard } from './pages/UserDashboardPage';
 import { AdminDashboard } from './pages/AdminDashboardPage';
 import { Category } from './pages/CategoryPage';
 import { Product } from './pages/ProductPage';
+import { Shop } from './pages/ShopPage';
 
 const PrivateRoute = (props: {
   component: any;
@@ -49,6 +50,7 @@ export const Routes = () => (
       <Route path='/' exact={true} component={Landing} />
       <Route path='/signin' exact={true} component={Signin} />
       <Route path='/signup' exact={true} component={Signup} />
+      <Route path='/shop' exact={true} component={Shop} />
       <PrivateRoute path='/user/dashboard' exact={true} component={UserDashboard} />
       <AdminRoute path='/admin/dashboard' exact={true} component={AdminDashboard} />
       <AdminRoute path='/create/category' exact={true} component={Category} />
