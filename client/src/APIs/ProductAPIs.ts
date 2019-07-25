@@ -12,3 +12,23 @@ export const getProducts = (sortBy: string) => (
       return error.response.data;
     })
 );
+
+export const getFilteredProducts = (skip: number, limit: number, filters: Object = {}) => {
+
+  const data = {
+    skip,
+    limit,
+    filters
+  }
+
+  return (axios.post(`${API}/products/by/search`, data)
+    .then(function (response) {
+      console.log(response);
+      return response;
+    })
+    .catch(function (error) {
+      console.log(error);
+      return error.response.data;
+    })
+  );
+};

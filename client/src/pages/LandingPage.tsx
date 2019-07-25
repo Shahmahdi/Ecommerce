@@ -44,16 +44,20 @@ export const Landing = () => {
       <>
         <h2 className="mb-4">New arrival</h2>
         <div className="row">
-          {productByArrival.map((p, i) => (
-            <Card key={i} product={p} />
-          ))}
+          <div className="col-4 mb-3">
+            {productByArrival.map((p, i) => (
+              <Card key={i} product={p} />
+            ))}
+          </div>
         </div>
 
         <h2 className="mb-4">Best Sellers</h2>
         <div className="row">
-          {productBySell.map((p, i) => (
-            <Card key={i} product={p} />
-          ))}
+          <div className="col-4 mb-3">
+            {productBySell.map((p, i) => (
+              <Card key={i} product={p} />
+            ))}
+          </div>
         </div>
       </>
     </Layout>
