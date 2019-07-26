@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Layout } from '../components/common/Layout';
 import { ProductCreateForm } from '../components/product/CreateForm';
 
-export const Product = () => (
+export const ProductCreatePage = () => (
   <Layout
     title="Product page"
     description="Add a new product"
