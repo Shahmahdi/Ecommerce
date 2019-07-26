@@ -3,6 +3,7 @@ import { Layout } from '../components/common/Layout';
 import { useState, useEffect } from 'react';
 import { getProducts } from '../APIs/ProductAPIs';
 import { Card } from '../components/common/Card';
+import { Search } from '../components/Search';
 
 export const Landing = () => {
 
@@ -42,22 +43,23 @@ export const Landing = () => {
       className="container-fluid"
     >
       <>
+        <Search />
         <h2 className="mb-4">New arrival</h2>
         <div className="row">
-          <div className="col-4 mb-3">
-            {productByArrival.map((p, i) => (
+          {productByArrival.map((p, i) => (
+            <div className="col-4 mb-3">
               <Card key={i} product={p} />
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
 
         <h2 className="mb-4">Best Sellers</h2>
         <div className="row">
-          <div className="col-4 mb-3">
-            {productBySell.map((p, i) => (
+          {productBySell.map((p, i) => (
+            <div className="col-4 mb-3">
               <Card key={i} product={p} />
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </>
     </Layout>
