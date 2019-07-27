@@ -75,3 +75,13 @@ export const getSingleProduct = (productId: string) => (
       return error.response.data;
     })
 );
+
+export const getRelatedProducts = (productId: string) => (
+  axios.get(`${API}/products/related/${productId}`)
+    .then(function (response) {
+      return response;
+    })
+    .catch(function (error) {
+      return error.response.data;
+    })
+);
