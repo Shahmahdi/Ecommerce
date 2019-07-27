@@ -4,7 +4,7 @@ import Navbar from '../Navbar';
 export const Layout = (props: {
   title: string;
   description: string;
-  className: string;
+  className?: string;
   children?: JSX.Element;
 }) => (
   <div>

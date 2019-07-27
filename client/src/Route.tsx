@@ -9,6 +9,7 @@ import { AdminDashboard } from './pages/AdminDashboardPage';
 import { Category } from './pages/CategoryPage';
 import { ProductCreatePage } from './pages/ProductCreatePage';
 import { Shop } from './pages/ShopPage';
+import { ProductDetailsPage } from './pages/ProductDetailsPage';
 
 const PrivateRoute = (props: {
   component: any;
@@ -55,6 +56,7 @@ export const Routes = () => (
       <AdminRoute path='/admin/dashboard' exact={true} component={AdminDashboard} />
       <AdminRoute path='/create/category' exact={true} component={Category} />
       <AdminRoute path='/create/product' exact={true} component={ProductCreatePage} />
+      <Route path='/product/:productId' exact={true} component={ProductDetailsPage} />
     </Switch>
   </BrowserRouter>
 );

@@ -1,6 +1,13 @@
 import axios from 'axios';
 import { API } from '../config';
 
+export interface Category {
+  _id: string | null;
+  name: string;
+  createAt: Date;
+  updatedAt: Date;
+}
+
 export const categoryFormSubmit = (userId: string, token: string, category: Object) => {
 
   const config = {
