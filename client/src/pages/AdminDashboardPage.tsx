@@ -12,8 +12,9 @@ export const AdminDashboard = () => {
       title="Dashboard"
       description="Dashboard Page"
       className="container-fluid"
+      footerClassName="fixed bottom-0"
     >
-      <div className="row">
+      <div className="row pv4">
         <div className="col-3">
           <div className="card">
             <h3 className="card-header">Admin links</h3>

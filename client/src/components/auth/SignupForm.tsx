@@ -19,7 +19,7 @@ export const SignupForm = () => {
   }
 
   return (
-    <>
+    <div className="pv4">
       <ShowError error={values.error} />
       <ShowSuccess success={`${values.success ? 'New account is create. Please Sign in' : '' }`} />
       <form>
@@ -76,6 +76,6 @@ export const SignupForm = () => {
         >Submit
         </button>
       </form>
-    </>
+    </div>
   );
 };

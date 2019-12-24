@@ -7,8 +7,9 @@ export const Category = () => (
     title="Category page"
     description="Add a new category"
     className="container col-xs-8 offset-md-2"
+    footerClassName="fixed bottom-0"
   >
-    <div className="row">
+    <div className="row pv4">
       <div className="col-md-8 offset-md-2">
         <CategoryCreateForm />
       </div>

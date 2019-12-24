@@ -12,8 +12,9 @@ export const UserDashboard = () => {
       title="Dashboard"
       description="Dashboard Page"
       className="container-fluid"
+      footerClassName="fixed bottom-0"
     >
-      <div className="row">
+      <div className="row pv4">
         <div className="col-3">
           <div className="card">
             <h3 className="card-header">User links</h3>
@@ -38,7 +39,7 @@ export const UserDashboard = () => {
           </div>
         </div>
         <div className="col-9">
-          <div className="card mb-5">
+          <div className="card mb-3">
             <h3 className="card-header">User information</h3>
             <ul className="list-group">
               <li className="list-group-item">{name}</li>
@@ -48,7 +49,7 @@ export const UserDashboard = () => {
               </li>
             </ul>
           </div>
-          <div className="card mb-5">
+          <div className="card mb-3">
             <h3 className="card-header">Purchase history</h3>
             <ul className="list-group">
               <li className="list-group-item">history</li>

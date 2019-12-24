@@ -99,7 +99,7 @@ export const Shop = () => {
       description="Node React Ecommerce app"
       className="container-fluid"
     >
-      <div className="row">
+      <div className="row pv4">
         <div className="col-4">
           <h4>Filter by categories</h4>
           <ul>
@@ -129,11 +129,12 @@ export const Shop = () => {
         </div>
         <div className="col-8">
           <div className="row">
-            {filteredResult.map((product: any) => (
+            {size > 0 ? filteredResult.map((product: any) => (
               <div className="col-6 mb-3">
                 <Card product={product} />
               </div>
-            ))}
+            ))
+          : <p className="fw5 f4 tc">No result found</p>}
           </div>
           <div className="row">
             <div className="col-12">

@@ -7,6 +7,7 @@ export const Signup = () => (
     title="Sign up"
     description="Please sign up to enter Ecommerce site"
     className="container col-xs-8 offset-md-2"
+    footerClassName="fixed bottom-0"
   >
     <SignupForm /> 
   </Layout>
