@@ -9,8 +9,8 @@ export const ShowImage = (props: {
       <img
         src={`${API}/${props.url}/photo/${props.item._id}`}
         alt={`${props.item.name}`}
-        className="mb-3"
-        style={{ maxHeight: '35vh', margin: 'auto' }}
+        className="mb-3 h4"
+        style={{ margin: 'auto' }}
       />
     </div>
   );

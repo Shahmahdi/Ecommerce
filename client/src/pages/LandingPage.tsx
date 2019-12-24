@@ -47,7 +47,7 @@ export const Landing = () => {
         <h2 className="mb-4">New arrival</h2>
         <div className="row">
           {productByArrival.map((p, i) => (
-            <div className="col-4 mb-3">
+            <div className="col-3 mb-3">
               <Card key={i} product={p} />
             </div>
           ))}
@@ -56,7 +56,7 @@ export const Landing = () => {
         <h2 className="mb-4">Best Sellers</h2>
         <div className="row">
           {productBySell.map((p, i) => (
-            <div className="col-4 mb-3">
+            <div className="col-3 mb-3">
               <Card key={i} product={p} />
             </div>
           ))}

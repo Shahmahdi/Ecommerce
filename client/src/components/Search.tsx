@@ -55,8 +55,9 @@ export const Search = () => {
             e.preventDefault();
             searchSubmit();
           }}
+          style={{backgroundColor: '#d50000'}}
         >
-          <span className="input-group-text">
+          <span className="input-group-text pa4" style={{backgroundColor: '#d50000', border: 'none'}}>
             <div className="input-group input-group-lg">
               <div className="input-group-prepend">
                 <select
