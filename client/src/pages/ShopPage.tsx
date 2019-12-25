@@ -100,7 +100,7 @@ export const Shop = () => {
       className="container-fluid"
     >
       <div className="row pv4">
-        <div className="col-4">
+        <div className="col-3">
           <h4>Filter by categories</h4>
           <ul>
             {category.map((c: any) => (
@@ -127,7 +127,7 @@ export const Shop = () => {
           </div>
 
         </div>
-        <div className="col-8">
+        <div className="col-9">
           <div className="row">
             {size > 0 ? filteredResult.map((product: any) => (
               <div className="col-4 mb-3">

@@ -64,11 +64,11 @@ export const ProductDetailsPage = (url: any) => {
                       <div className="card-body">
                         <p
                           className="lead mt-2"
-                          style={{
-                            textOverflow: 'ellipsis',
-                            whiteSpace: 'nowrap',
-                            overflow: 'hidden'
-                          }}
+                          // style={{
+                          //   textOverflow: 'ellipsis',
+                          //   whiteSpace: 'nowrap',
+                          //   overflow: 'hidden'
+                          // }}
                         >
                           {product.description}</p>
                         <p className="black-7 br-pill pl2">${product.price}</p>
