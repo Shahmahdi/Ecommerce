@@ -130,7 +130,7 @@ export const Shop = () => {
         <div className="col-8">
           <div className="row">
             {size > 0 ? filteredResult.map((product: any) => (
-              <div className="col-6 mb-3">
+              <div className="col-4 mb-3">
                 <Card product={product} />
               </div>
             ))
