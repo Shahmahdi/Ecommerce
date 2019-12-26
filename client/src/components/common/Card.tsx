@@ -1,13 +1,27 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { ShowImage } from './ShowImage';
 import { Product } from '../../APIs/ProductAPIs';
 import moment from 'moment';
+import { addItemIntoCart } from '../../APIs/CartAPIs';
+import { useState } from 'react';
 
 export const Card = (props: {
   product: Product;
   hideProductDetailsButton?: boolean;
-}) => (
+}) => {
+
+  const [redirect, setRedirect] = useState(false);
+
+  const shouldRedirect = (redirect: boolean) => {
+    if (redirect) {
+      return <Redirect to="/cart" />
+    }
+  }
+
+  return (
+    <>
+    {shouldRedirect(redirect)}
     <div className="card">
       <div className="card-header name">{props.product.name}</div>
       <div className="card-body">
@@ -44,10 +58,15 @@ export const Card = (props: {
           </div>
         }
         <div className="fl w-50 pl1">
-          <button className="btn btn-outline-warning black mt-2 mb-2 w-100">
+          <button
+            className="btn btn-outline-warning black mt-2 mb-2 w-100"
+            onClick={() => addItemIntoCart(props.product, () => setRedirect(true))}
+          >
             Add to cart
           </button>
         </div>
       </div>
     </div>
+    </>
   );
+}
