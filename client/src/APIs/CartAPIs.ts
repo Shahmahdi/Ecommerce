@@ -1,4 +1,6 @@
 import { Product } from "./ProductAPIs";
+import axios from 'axios';
+import { API } from '../config';
 
 export const addItemIntoCart = (item: object, next: () => void) => {
   let cart: any = [];
@@ -75,4 +77,23 @@ export const deleteItemFromCart = (productId: string) => {
   }
 
   return cart;
+}
+
+export const braintreeClientToken = (userId: string, token: string) => {
+  const config = {
+    headers: {
+      'Authorization': `Bearer ${token}`,
+      'Content-Type': 'application/json'
+    }
+  };
+
+  return (axios.get(`${API}/braintree/getToken/${userId}`, config)
+    .then((response: any) => {
+      // console.log(response);
+      return response;
+    })
+    .catch(function (error) {
+      console.log(error);
+    })
+  );
 }
