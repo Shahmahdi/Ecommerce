@@ -35,6 +35,7 @@ export const setUserDataIntoLocalStorage = (data: object, next: Function) => {
 export const signout = (next: Function) => {
   if (typeof window !== undefined) {
     localStorage.removeItem('jwt');
+    localStorage.removeItem('cart');
   }
   next();
   axios.get(`${API}/signout`)

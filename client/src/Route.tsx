@@ -10,6 +10,7 @@ import { Category } from './pages/CategoryPage';
 import { ProductCreatePage } from './pages/ProductCreatePage';
 import { Shop } from './pages/ShopPage';
 import { ProductDetailsPage } from './pages/ProductDetailsPage';
+import { CartPage } from './pages/CartPage';
 
 const PrivateRoute = (props: {
   component: any;
@@ -52,6 +53,7 @@ export const Routes = () => (
       <Route path='/signin' exact={true} component={Signin} />
       <Route path='/signup' exact={true} component={Signup} />
       <Route path='/shop' exact={true} component={Shop} />
+      <PrivateRoute path='/cart' exact={true} component={CartPage} />
       <PrivateRoute path='/user/dashboard' exact={true} component={UserDashboard} />
       <AdminRoute path='/admin/dashboard' exact={true} component={AdminDashboard} />
       <AdminRoute path='/create/category' exact={true} component={Category} />

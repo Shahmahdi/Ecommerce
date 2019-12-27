@@ -15,6 +15,7 @@ export interface Product {
   shipping: boolean;
   createdAt: Date;
   updatedAt: Date;
+  count?: number;
 }
 
 export const getProducts = (sortBy: string) => (
